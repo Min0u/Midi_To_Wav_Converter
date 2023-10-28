@@ -10,12 +10,12 @@ import java.util.List;
 public class Midi_To_Wav {
     public static void main(String[] args) {
         // Sequence, resolution
-        String fileMidi = "C:\\Users\\Admin\\Desktop\\FAC\\UCA\\Licence\\L3\\S1\\PCOO\\TD\\Projet 2\\Fichier Test\\fichier3.mid";
+        String fileMidi = "Chemin\\Vers\\Fichier\\Midi"; // Remplacez "Chemin\\Vers\\Fichier\\Midi" par le chemin votre fichier Midi.
         FichierMidi f = new FichierMidi();
         f.extract(fileMidi);
         Sequence sequence = FichierMidi.getSequence();
 
-        // Midi.Tracks
+        // Tracks
         Tracks tracks = new Tracks();
         tracks.extract(sequence);
         List<Track> tracksList = Tracks.getTracks();
@@ -29,16 +29,16 @@ public class Midi_To_Wav {
         Message messages = new Message();
         messages.extract(events);
 
-        // totalTime, Midi.Notes
+        // totalTime, Notes
         float totalTime = FichierMidi.calculTotalTime();
         FichierMidi.setTotalTime(totalTime);
 
-        // Wave.Signal
+        // Signal
         Signal s = new Signal();
         int[] signal = s.genererSignal(Notes.getNotes(), FichierMidi.getTotalTime());
 
-        // Wave.FichierWav
-        String fileWav = "C:\\Users\\Admin\\Desktop\\FAC\\UCA\\Licence\\L3\\S1\\PCOO\\TD\\Projet 2\\Fichier Test\\fichier3.wav";
+        // FichierWav
+        String fileWav = "Chemin\\Vers\\Fichier\\Wav"; // Remplacez "Chemin\\Vers\\Fichier\\Midi" par le chemin votre fichier Wav.
         FichierWav.ecrireFichierWav(fileWav, signal);
     }
 }
