@@ -44,7 +44,9 @@ Avant de commencer, assurez-vous d'avoir installé le **Java Development Kit (JD
 
 5. **Configurer les Fichiers d'Entrée et de Sortie**
 
-   Avant d'exécuter le programme, modifiez le chemin du fichier MIDI d'entrée et du fichier WAV de sortie dans la classe Midi_To_Wav.java.
+   Avant d'exécuter le programme, modifiez le chemin du fichier MIDI d'entrée et du fichier WAV de sortie dans la classe `Midi_To_Wav.java`.
 6. **Vérifiez le Fichier de Sortie**
 
    Après l'exécution réussie, le fichier WAV converti sera généré dans le dossier spécifié.
+   
+   **Note** : Ce projet fonctionne avec des fichiers MIDI qui suivent un format similaire aux fichiers MIDI du dossier `Fichier Test` fourni dans ce dépôt. Assurez-vous que le fichier MIDI que vous souhaitez convertir est structuré de manière compatible avec ce programme pour garantir une conversion réussie.
