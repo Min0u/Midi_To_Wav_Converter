@@ -1,15 +1,15 @@
 # MIDI to WAV Converter
 
-Ce dépôt présente un convertisseur de fichiers MIDI en fichiers WAV, développé en Java en utilisant Java Sound API. Ce programme permet d'extraire les données MIDI, de les traiter et de générer des fichiers audio WAV.
+Ce projet propose un convertisseur Java permettant de convertir des fichiers MIDI en fichiers WAV. Il est basé sur les packages `Midi` et `Wav` qui contiennent des classes pour l'extraction des données MIDI, le traitement des messages, la génération des notes et la création des fichiers WAV.
 
 ## Structure du Projet
 
-Le projet est organisé en packages, à l'exception du fichier `Midi_To_Wav.java` qui contient le point d'entrée "main" et qui se trouve dans le répertoire principal :
+Le projet est organisé en plusieurs packages :
 
-- **Midi** : Contient les classes liées au traitement MIDI, y compris l'extraction de séquences, de pistes et d'événements MIDI.
-- **Wav** : Contient les classes liées à la génération de fichiers audio WAV, y compris la conversion des données MIDI en signal audio.
-- **Midi_To_Wav.java** : Classe principale pour exécuter la conversion MIDI vers WAV.
-
+- **Midi**: Contient les classes liées à l'extraction et au traitement des fichiers MIDI.
+- **Wav**: Contient les classes responsables de la génération des fichiers WAV.
+- **To**: Contient la classe `MidiToWav` qui orchestre la conversion MIDI vers WAV.
+  
 ## Comment Utiliser
 
 ### Prérequis
@@ -30,23 +30,20 @@ Avant de commencer, assurez-vous d'avoir installé le **Java Development Kit (JD
    javac chemin/vers/les/fichiers/*.java
    ```
 
-   Remplacez chemin/vers/les/fichiers/ par le chemin vers les fichiers source Java dans votre système.
-
 3. **Exécutez le Programme**
 
    Restez dans le même répertoire que les fichiers compilés (*.class) et exécutez le fichier principal du programme :
 
    ```sh
-   java -cp chemin/vers/les/classes Midi_To_Wav
+   java -cp chemin/vers/les/classes Main
    ```
 
-   Remplacez chemin/vers/les/classes/ par le chemin vers les fichiers compilés.
 
-5. **Configurer les Fichiers d'Entrée et de Sortie**
+5. **Conversion de Fichiers MIDI en WAV**
 
-   Avant d'exécuter le programme, modifiez le chemin du fichier MIDI d'entrée et du fichier WAV de sortie dans la classe `Midi_To_Wav.java`.
-6. **Vérifiez le Fichier de Sortie**
-
-   Après l'exécution réussie, le fichier WAV converti sera généré dans le dossier spécifié.
+   Pour convertir un fichier MIDI en WAV, utilisez la classe MidiToWav du package To. Vous pouvez appeler la méthode statique convert en passant le chemin du fichier MIDI en entrée et le chemin du fichier WAV en sortie :
+   ```java
+   MidiToWav.convert("chemin/vers/fichier.mid", "chemin/vers/fichier.wav");
+   ```
    
-   **Note** : Ce projet fonctionne avec des fichiers MIDI qui suivent un format similaire aux fichiers MIDI du dossier `Fichier Test` fourni dans ce dépôt. Assurez-vous que le fichier MIDI que vous souhaitez convertir est structuré de manière compatible avec ce programme pour garantir une conversion réussie.
+   **Note** : Ce projet fonctionne avec des fichiers MIDI qui suivent un format similaire aux fichiers MIDI du dossier `Fichier Test` fourni dans ce dépôt. Assurez-vous que le fichier MIDI que vous souhaitez convertir est structuré de                 manière compatible avec ce programme pour garantir une conversion réussie.
