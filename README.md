@@ -24,26 +24,15 @@ Avant de commencer, assurez-vous d'avoir installé le **Java Development Kit (JD
 
 2. **Compilez le Projet**
 
-   Ouvrez un terminal ou une invite de commande. Accédez au répertoire racine du projet et compilez les fichiers source Java :
-
-   ```sh
-   javac chemin/vers/les/fichiers/*.java
-   ```
+   Ouvrez un terminal ou une invite de commande. Accédez au répertoire racine du projet et compilez les fichiers source Java.
 
 3. **Exécutez le Programme**
 
-   Restez dans le même répertoire que les fichiers compilés (*.class) et exécutez le fichier principal du programme :
-
-   ```sh
-   java -cp chemin/vers/les/classes Main
-   ```
+   Restez dans le même répertoire que les fichiers compilés (*.class) et exécutez le fichier principal du programme.
 
 
 5. **Conversion de Fichiers MIDI en WAV**
 
-   Pour convertir un fichier MIDI en WAV, utilisez la classe MidiToWav du package To. Vous pouvez appeler la méthode statique convert en passant le chemin du fichier MIDI en entrée et le chemin du fichier WAV en sortie :
-   ```java
-   MidiToWav.convert("chemin/vers/fichier.mid", "chemin/vers/fichier.wav");
-   ```
+   Pour convertir un fichier MIDI en WAV, utilisez la classe MidiToWav du package To. Vous pouvez appeler la méthode statique convert en passant le chemin du fichier MIDI en entrée et le chemin du fichier WAV en sortie.
 
 **Note** : Ce projet fonctionne avec des fichiers MIDI qui suivent un format similaire aux fichiers MIDI du dossier `Fichier Test` fourni dans ce dépôt. Assurez-vous que le fichier MIDI que vous souhaitez convertir est structuré de                 manière compatible avec ce programme pour garantir une conversion réussie.
