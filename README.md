@@ -1,38 +1,49 @@
 # MIDI to WAV Converter
 
-Ce projet propose un convertisseur Java permettant de convertir des fichiers MIDI en fichiers WAV. Il est basé sur les packages `Midi` et `Wav` qui contiennent des classes pour l'extraction des données MIDI, le traitement des messages, la génération des notes et la création des fichiers WAV.
+This project provides a Java-based converter for converting MIDI files to WAV files. It is built upon the `Midi` and `Wav` packages which contain classes for MIDI data extraction, message processing, note generation, and WAV file creation.
 
-## Structure du Projet
+## Project Structure
 
-Le projet est organisé en plusieurs packages :
+The project is organized into several packages:
 
-- **Midi**: Contient les classes liées à l'extraction et au traitement des fichiers MIDI.
-- **Wav**: Contient les classes responsables de la génération des fichiers WAV.
-- **To**: Contient la classe `MidiToWav` qui orchestre la conversion MIDI vers WAV.
-  
-## Comment Utiliser
+- **Midi**: Contains classes related to MIDI file extraction and processing.
+- **Wav**: Contains classes responsible for WAV file generation.
+- **To**: Contains the `MidiToWav` class which orchestrates the MIDI to WAV conversion.
 
-### Prérequis
+## How to Use
 
-Avant de commencer, assurez-vous d'avoir installé le **Java Development Kit (JDK)** sur votre machine. Vous pouvez le télécharger depuis [le site officiel d'Oracle](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html).
+### Prerequisites
 
-### Compilation et Exécution du Projet
+Before you begin, ensure you have installed the **Java Development Kit (JDK)** on your machine. You can download it from [Oracle's official website](https://www.oracle.com/java/technologies/javase-jdk15-downloads.html).
 
-1. **Téléchargez le Projet**
+### Compilation and Execution of the Project
 
-   Clonez ou téléchargez ce dépôt sur votre machine.
+1. **Download the Project**
 
-2. **Compilez le Projet**
+   Clone or download this repository to your machine.
 
-   Ouvrez un terminal ou une invite de commande. Accédez au répertoire racine du projet et compilez les fichiers source Java.
+2. **Compile the Project**
 
-3. **Exécutez le Programme**
+   Open a terminal or command prompt. Navigate to the root directory of the project and compile the Java source files.
 
-   Restez dans le même répertoire que les fichiers compilés (*.class) et exécutez le fichier principal du programme.
+   ```bash
+   javac path/to/your/project/*.java
+   ```
 
+3. **Execute the Program**
 
-5. **Conversion de Fichiers MIDI en WAV**
+   Stay in the same directory as the compiled files (*.class) and execute the main program file.
 
-   Pour convertir un fichier MIDI en WAV, utilisez la classe MidiToWav du package To. Vous pouvez appeler la méthode statique convert en passant le chemin du fichier MIDI en entrée et le chemin du fichier WAV en sortie.
+   ```bash
+   java path.to.your.project.Main
+   ```
 
-**Note** : Ce projet fonctionne avec des fichiers MIDI qui suivent un format similaire aux fichiers MIDI du dossier `Fichier Test` fourni dans ce dépôt. Assurez-vous que le fichier MIDI que vous souhaitez convertir est structuré de                 manière compatible avec ce programme pour garantir une conversion réussie.
+4. **Converting MIDI to WAV Files**
+
+   To convert a MIDI file to WAV, use the `MidiToWav` class from the `To` package. Call the static `convert` method, passing in the input MIDI file path and the output WAV file path.
+
+   ```java
+   MidiToWav.convert("input.mid", "output.wav");
+   ```
+
+**Note**: This project works with MIDI files that follow a format similar to those in the `Test Files` directory provided in this repository. Ensure that the MIDI file you intend to convert is structured compatibly with this program to ensure successful conversion.
